@@ -1,7 +1,7 @@
 <h1 class="mt-4 text-center">Articles</h1>
 
-<div class="container">
-<%= link_to 'New Article', new_article_path %>
+<div class="container text-center">
+  <%= link_to 'New Article', new_article_path %>
 </div>
 
 <% @articles.each do |article| %>
@@ -10,8 +10,8 @@
       <h4 class="card-title"><%= article.title %></h4>
     </div>
     <div class="card-body">
-      <p class="card-text"><%= article.description %></p>
-      <a href="/articles/" class="btn btn-primary">Show Article</a>
+      <p class="card-text"><%= truncate(article.description, length: 50) %></p>
+      <a href="#" class="btn btn-outline-info">Show Article</a>
     </div>
     <div class="card-footer text-muted">
       <small>created <%= time_ago_in_words(article.created_at) %> ago, edited <%= time_ago_in_words(article.updated_at) %> ago</small>
