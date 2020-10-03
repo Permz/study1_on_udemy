@@ -9,7 +9,7 @@
     <div class="card-header">
       <h4 class="text-center card-title"><%= article.title %></h4>
     </div>
-    <div class="card-body">
+    <div class="card-body text-center">
       <p class="card-text"><%= truncate(article.description, length: 50) %></p>
       <%= link_to 'Show', article_path(article), class: "btn btn-outline-info" %>
     </div>
